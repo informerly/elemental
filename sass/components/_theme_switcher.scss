@@ -1,0 +1,21 @@
+#theme-switcher {
+    position: fixed;
+    top: 250px;
+    left: 0;
+    z-index: 10;
+
+    .theme-switcher-btn {
+        height: 30px;
+        line-height: 30px;
+        padding-left: 5px;
+        width: 25px;
+        background: #000;
+        color: #fff;
+        display: block;    
+    }
+    
+}
+
+.popover {
+    width: 200px;
+}

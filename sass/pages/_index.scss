@@ -1,0 +1,70 @@
+#content.padded {
+    padding-top: 75px;
+}
+.screen {
+    min-height: 650px;
+    background: #fff;
+    margin: 0;
+
+    .container {
+        padding-top: 70px;
+
+    }
+
+    @media(max-width: 991px)  {
+        min-height: 500px;
+    }
+
+    @media(max-width: 767px)  {
+        min-height: 400px;
+    }
+}
+
+#home {
+    background: #fff;
+
+    &.home-app {
+        .app-description-text {
+
+            text-align: center;
+            h2.main-description-text {
+                font-family: $body-font-family;
+                font-size: 4.5em;
+
+                @media(max-width: 991px) {
+                    font-size: 3.5em;
+                }
+            }
+
+            .subtext {
+                margin: 30px auto;
+            }
+
+            .cta {
+                padding: 20px 60px;
+                font-size: 1.5em;
+
+                &.btn-ghost {
+                    padding: 16px 55px;
+                    margin-left: 20px;
+                }
+            }
+
+            @media(max-width: 600px) {
+                .cta {
+                    display: block;
+                    margin: 10px auto;
+                    width: 100%;
+                    &.btn-ghost {
+                        margin-left: 0;
+                    }
+                }
+
+            }
+
+            .cta-wrapper {
+                margin-top: 50px;
+            }
+        }
+    }
+}

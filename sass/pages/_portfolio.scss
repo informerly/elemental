@@ -1,0 +1,114 @@
+#portfolio {
+    background: $dark;
+    min-height: 620px;
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: $lightGray;
+    }
+
+    .project-text {
+        margin-bottom: 40px;
+    }
+
+    .project-button-container {
+        margin-top: 8px;
+    }
+
+    .project-title {
+        padding: 0;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+    }
+
+    .project-subtitle {
+        color: $gray;
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    .project-description  {
+        .lead {
+            color: $lightGray;
+            margin: 0;
+            padding: 0;
+            letter-spacing: 0.5px;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+
+    .project-image {
+        img {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+}
+
+
+/*========================================
+=            DARK BG CAROUSEL            =
+========================================*/
+#projects-carousel, #tour-carousel {
+    .carousel-inner {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .carousel-control {
+        background: none;
+        &.left {
+            left: -80px;
+        }
+
+        &.right {
+            right: -60px;
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            z-index: 5;
+            display: inline-block;
+            font-size: 1.5em;
+        }
+    }
+
+    @media(max-width: 991px) {
+
+        .carousel-inner {
+            width: 80%;
+        }
+
+        .carousel-control {
+            background: none;
+            &.left {
+                left: -30px;
+            }
+
+            &.right {
+                right: -10px;
+            }
+
+            i {
+                position: absolute;
+                top: 50%;
+                z-index: 5;
+                display: inline-block;
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+
+/*-----  End of DARK BG CAROUSEL  ------*/
+

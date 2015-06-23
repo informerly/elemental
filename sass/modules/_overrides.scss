@@ -1,0 +1,310 @@
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar a {
+    font-family: $heading-font-family;
+    color: $black;
+}
+
+body {
+    font-family: $body-font-family;   
+    color: $darkGray;
+
+    p {
+        line-height: 1.5;
+        font-weight: 300;
+
+        &.index-main-text {
+            font-weight: 400;
+        }
+    }
+
+
+
+}
+
+.lead {
+    color: $black;
+}
+
+@media(max-width:1300px) {
+    .container {
+        max-width: 980px;
+    }
+}
+
+
+.form-control {
+    @include box-shadow(none);
+    border-color: lighten($gray, 20%);
+    @include border-radius(0);
+
+    &:focus {
+        @include box-shadow(none);
+        border-color: $primary;
+    }
+}
+
+/*==================================================
+=            CUSTOM MODAL & TRANSITIONS            =
+==================================================*/
+
+.modal {
+
+    .modal-content {
+        @include box-shadow(none);
+        @include border-radius(0);
+        border: none;    
+    }
+
+    &.modal-large {
+        .modal-dialog {
+            width: 80%;
+        }
+    }
+
+    &.modal-dark {
+        background: $dark;
+
+        .custom-close {
+            color: $white;
+        }
+
+        .modal-dialog, .modal-content {
+            background: $dark;
+        }
+
+
+    }
+
+    .modal-header {
+        border: none;
+    }
+
+    .custom-close {
+        font-size: 3em;
+        top: 20px;
+        right: 30px;
+        position: absolute;
+        opacity: 1;
+    }
+    
+}
+
+.modal-backdrop {
+    background: #fff;
+    border-top: 5px solid $black;
+    @include transition(all 0.1s ease-in);
+    &.in {
+        opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes fadeAndScaleIn {
+    from {
+        opacity: 0;
+        @include transform(scale(0.7));
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeAndScaleIn {
+    from {
+        opacity: 0;
+        @include transform(scale(0.7));
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeAndScaleOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        @include transform(scale(0.7));
+    }
+}
+
+@keyframes fadeAndScaleOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        @include transform(scale(0.7));
+    }
+}
+
+
+.fade-and-zoom {
+    -webkit-animation-duration: .15s;
+    -moz-animation-duration: .15s;
+    -ms-animation-duration: .15s;
+    animation-duration: .15s;
+
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    -ms-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    -ms-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+.fade-and-zoom {
+    -webkit-animation-name: fadeAndScaleIn;
+    -moz-animation-name: fadeAndScaleIn;
+    -ms-animation-name: fadeAndScaleIn;
+    animation-name: fadeAndScaleIn;    
+}
+
+
+/*-----  End of CUSTOM MODAL & TRANSITIONS  ------*/
+
+
+
+
+/*===============================
+=            BUTTONS            =
+===============================*/
+
+.btn {
+    @include border-radius(2px);
+}
+
+.btn-mighty {
+    padding: 20px 60px;
+    font-size: 2em;
+}
+.btn-ghost {
+    border: 5px solid $black;
+    color: $black;
+    @include transition(all 0.2s ease-in);
+
+    &.light {
+        border: 5px solid darken($lightGray, 5%);
+        color: $gray;        
+
+        &:hover {
+            border-color: darken($lightGray, 15%);
+            color: $black;
+        }
+    }
+}
+
+.btn-primary {
+    background-color: $primary; 
+    color: $white;
+
+    &:hover {
+        color: $white;
+        background-color: darken($primary, 5%); 
+        
+    }
+
+    &:active, &.active {
+        background-color: darken($primary, 10%); 
+        @include box-shadow(inset rgba(0,0,0,0.4) 0 2px 2px);
+    }
+
+
+    &.gradient {
+        @include filter-gradient(#5d94d6, #1956ad, vertical); 
+        $experimental-support-for-svg: true;
+        @include background-image(linear-gradient(top,  #5d94d6 0%,#1956ad 100%));
+        color: $white;
+        text-shadow: 0 1px 1px rgba($black, 0.5);
+        border-color: #567094;
+        @include box-shadow(inset rgba(176, 206, 248, 0.88) 0 0 5px);
+    }
+
+}
+
+
+.btn-primary {
+    background-color: $primary; 
+    color: $white;
+
+    &:hover {
+        color: $white;
+        background-color: darken($primary, 5%); 
+        
+    }
+
+    &:active, &.active {
+        background-color: darken($primary, 10%); 
+        @include box-shadow(inset rgba(0,0,0,0.4) 0 2px 2px);
+    }
+
+
+    &.gradient {
+        @include filter-gradient(#5d94d6, #1956ad, vertical); 
+        $experimental-support-for-svg: true;
+        @include background-image(linear-gradient(top,  #5d94d6 0%,#1956ad 100%));
+        color: $white;
+        text-shadow: 0 1px 1px rgba($black, 0.5);
+        border-color: #567094;
+        @include box-shadow(inset rgba(176, 206, 248, 0.88) 0 0 5px);
+    }
+
+}
+
+.btn-white {
+    background: $white;
+    color: $black;
+    text-shadow: none;
+    border: 1px solid $lightGray;
+
+    &.gradient {
+        background-color: rgb(255,255,255); 
+        @include filter-gradient(#ffffff, #f4f4f4, vertical); 
+        $experimental-support-for-svg: true;
+        @include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(244,244,244,1) 100%));
+    }
+}
+
+
+.btn-danger {
+    background-color: $red; 
+    color: $white;
+
+    &:hover {
+        color: $white;
+        background-color: darken($red, 5%); 
+        
+    }
+
+    &:active, &.active {
+        background-color: darken($red, 10%); 
+        @include box-shadow(inset rgba(0,0,0,0.4) 0 2px 2px);
+    }
+
+
+    &.gradient {
+        background-color: rgb(199,74,70); 
+        @include filter-gradient(#c74a46, #c42f2d, vertical); 
+        $experimental-support-for-svg: true;
+        @include background-image(linear-gradient(top,  rgba(199,74,70,1) 0%,rgba(196,47,45,1) 100%));
+        @include box-shadow(inset rgba(lighten(#c74a46, 30%), 0.8) 0 0 5px);
+
+    }
+
+}
+
+
+
+/*-----  End of BUTTONS  ------*/
+

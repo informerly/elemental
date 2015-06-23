@@ -1,0 +1,42 @@
+.social-elements {
+    margin-top: 20px;
+    border-right: 1px solid #eee;
+    @media(max-width:991px) {
+        border: none;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.social-login-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+
+    &.social-facebook {
+        background: #4c699e;
+        border-color: #47618d;
+    }
+
+    &.social-twitter {
+        background: #1daee3;
+        border-color: #3997ba;
+    }
+
+    &.social-linkedin {
+        background: #4875B4;
+        border-color: #466b99;
+    }
+
+    &.social-linkedin {
+        background: #da573b;
+        border-color: #be5238;
+    }
+}
+
+.social-login-btn-dropdown {
+    width: 90px;
+    font-size: 14px;
+
+}

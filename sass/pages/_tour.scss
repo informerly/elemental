@@ -1,0 +1,15 @@
+#tour-modal {
+    .tour-text {
+        .main-text {
+            color: $lightGray;
+            font-size: 1.8em;
+            margin-top: 30px;
+        }
+
+        .subtext {
+            color: darken($lightGray, 10%);
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+    }
+}
